@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ShoppingBag, Twitter, Instagram, Github } from "lucide-react";
+import { Twitter, Instagram, Github } from "lucide-react";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -18,9 +19,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#2D5BFF] to-[#6320EE] flex items-center justify-center">
-                <ShoppingBag className="w-5 h-5 text-white" />
-              </div>
+              <Logo withName={false} />
               <span className="font-bold text-xl">ShopFlow</span>
             </div>
             <p className="text-white/60 max-w-sm leading-relaxed">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ShoppingBag, Heart, Search, Menu, X } from "lucide-react";
 import { useStore } from "@/lib/store";
+import Logo from "@/components/Logo";
 
 const links = [
   { label: "Home", path: "/" },
@@ -27,14 +28,7 @@ export default function Navbar() {
       <header className="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-black/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#2D5BFF] to-[#6320EE] flex items-center justify-center shadow-lg shadow-[#6320EE]/30">
-                <ShoppingBag className="w-5 h-5 text-white" />
-              </div>
-              <span className="font-bold text-xl tracking-tight text-[#0A0A0B]">
-                Shop<span className="text-[#6320EE]">Flow</span>
-              </span>
-            </Link>
+            <Logo nameClass="text-lg sm:text-xl" />
 
             <nav className="hidden md:flex items-center gap-1">
               {links.map((l) => {
